@@ -6,14 +6,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { Page404Component } from './pages/page404/page404.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Graphic1Component } from './pages/graphic1/graphic1.component';
-import { PagesComponent } from './pages/pages.component';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -21,18 +18,11 @@ import { PagesComponent } from './pages/pages.component';
     LoginComponent,
     RegisterComponent,
     Page404Component,
-    DashboardComponent,
-    BreadcrumbsComponent,
-    SidebarComponent,
-    HeaderComponent,
-    FooterComponent,
-    ProgressComponent,
-    Graphic1Component,
-    PagesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PagesModule
   ],
   bootstrap: [AppComponent]
 })
