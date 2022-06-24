@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: Page404Component },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 // el pathmatch full si esta la ruta vacia lo redirecciona
