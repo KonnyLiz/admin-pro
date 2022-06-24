@@ -10,6 +10,10 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
+// path '/dashboard' => PagesRoutingModule
+// path '/login' => AuthsRoutingModule -> login
+// path '/register' => AuthsRoutingModule -> register
+
 // el pathmatch full si esta la ruta vacia lo redirecciona
 @NgModule({
   imports: [
