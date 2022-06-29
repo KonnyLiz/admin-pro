@@ -1,1 +1,13 @@
-<p>increment works!</p>
+<div class="input-group">
+    <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" (click)="changeProgress(-5)">
+            <i class="fa fa-minus"></i>
+        </button>
+    </span>
+    <input type="number" class="form-control" [(ngModel)]="progress">
+    <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" (click)="changeProgress(5)">
+            <i class="fa fa-plus"></i>
+        </button>
+    </span>
+</div>

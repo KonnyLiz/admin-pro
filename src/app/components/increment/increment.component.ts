@@ -5,11 +5,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './increment.component.html',
   styleUrls: ['./increment.component.css']
 })
-export class IncrementComponent implements OnInit {
+export class IncrementComponent {
 
-  constructor() { }
+  progress: number = 50;
 
-  ngOnInit(): void {
+  get getPorcentaje() {
+    return `${this.progress}%`;
+  }
+
+  changeProgress(value: number) {
+    this.progress += value;
+    
+    if (this.progress > 100) {
+      this.progress = 100;
+    }
+
+    if (this.progress < 0) {
+      this.progress = 0;
+    }
   }
 
 }
