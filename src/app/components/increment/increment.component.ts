@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-increment',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncrementComponent {
 
-  progress: number = 50;
+  // le decimos que recibira valores desde afuera
+  @Input() progress: number = 50;
+
+  // le podemos pasar nombre a las propiedades de afuera
+  // afuera se llamara a valor en lugar de progress
+  // @Input('valor') name: number = 0;
 
   get getPorcentaje() {
     return `${this.progress}%`;
