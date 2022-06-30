@@ -6,17 +6,22 @@ import { EventEmitter } from '@angular/core';
   templateUrl: './increment.component.html',
   styleUrls: ['./increment.component.css']
 })
-export class IncrementComponent {
-
+export class IncrementComponent implements OnInit {
+  
   // le decimos que recibira valores desde afuera
   // @Input() progress: number = 50;
-
+  
   // le podemos pasar nombre a las propiedades de afuera
   // afuera se llamara a valor en lugar de progress
   @Input('valor') progress: number = 40;
-
+  @Input() btnClass: string = 'btn-primary';
+  
   // emitimos el valor del progress hacia el padre
   @Output() progressEvent: EventEmitter<number> = new EventEmitter();
+  
+  ngOnInit(): void {
+    this.btnClass = `btn ${this.btnClass}`;
+  }
 
   get getPorcentaje() {
     return `${this.progress}%`;
