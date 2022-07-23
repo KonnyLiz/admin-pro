@@ -1,0 +1,4 @@
+#54 Charts reutilizables
+Instalando Chart.js...'
+    npm install --save ng2-charts
+    npm install --save chart.js
